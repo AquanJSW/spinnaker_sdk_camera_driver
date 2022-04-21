@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(spinnaker_sdk_camera_driver)
 
 add_compile_options(-std=c++11)
+# set(CMAKE_BUILD_TYPE Debug)
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 

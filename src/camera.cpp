@@ -40,6 +40,9 @@ ImagePtr acquisition::Camera::grab_frame() {
     ImagePtr pResultImage;
     try{
         pResultImage = pCam_->GetNextImage(GET_NEXT_IMAGE_TIMEOUT_);
+        // if (MASTER_) {
+        //     n
+        // }
         // Check if the Image is complete
 
         if (pResultImage->IsIncomplete()) {
