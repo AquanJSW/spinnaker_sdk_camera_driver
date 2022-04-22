@@ -22,8 +22,8 @@ delay: 1.0
 
 #Camera info message details
 distortion_model: plumb_bob
-image_height: 2056
-image_width: 2464
+image_height: 2048
+image_width: 2448
 
 distortion_coeffs:
   - - -0.15299591865471868
