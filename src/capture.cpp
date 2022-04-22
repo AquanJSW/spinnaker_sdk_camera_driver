@@ -828,7 +828,8 @@ void acquisition::Capture::init_cameras(bool soft = false) {
         try {
 
             cams[i].init();
-
+            cams[i].setEnumValue("UserSetSelector", "UserSet1");
+            cams[i].get_pCam()->UserSetLoad.Execute();
             if (!soft) {
 
                 cams[i].set_color(color_);
@@ -903,7 +904,7 @@ void acquisition::Capture::init_cameras(bool soft = false) {
                         // cams[i].setFloatValue("AcquisitionFrameRate", 170);
                     } else {
                         cams[i].setEnumValue("TriggerMode", "On");
-                        cams[i].setEnumValue("LineSelector", "Line2");
+                        cams[i].setEnumValue("LineSelector", "Line1");
                         cams[i].setEnumValue("LineMode", "Output");
                         cams[i].setEnumValue("TriggerSource", "Software");
                     }

@@ -68,7 +68,7 @@ namespace acquisition {
         void setGetNextImageTimeout(uint64_t get_next_image_timeout) { GET_NEXT_IMAGE_TIMEOUT_ = get_next_image_timeout; }
         bool verifyBinning(int binningDesired);
         void calibrationParamsTest(int calibrationWidth, int calibrationHeight);
-        
+        CameraPtr get_pCam(){return pCam_;};
     private:
 
         Mat convert_to_mat(ImagePtr);
