@@ -829,7 +829,7 @@ void acquisition::Capture::init_cameras(bool soft = false) {
 
             cams[i].init();
             cams[i].setEnumValue("UserSetSelector", "UserSet1");
-            cams[i].get_pCam()->UserSetLoad.Execute();
+            // cams[i].get_pCam()->UserSetLoad.Execute();
             if (!soft) {
 
                 cams[i].set_color(color_);

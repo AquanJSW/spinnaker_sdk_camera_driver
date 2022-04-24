@@ -363,7 +363,9 @@ void acquisition::Camera::exposureTest() {
 }
 bool acquisition::Camera::verifyBinning(int binningDesired) {
     int actualBinningX =  (pCam_ ->SensorWidth())/(pCam_ ->Width());
+    printf("actualBinningX:%d\n",actualBinningX);
     int actualBinningY =  (pCam_ ->SensorHeight())/(pCam_ ->Height());
+    printf("actualBinningY:%d\n",actualBinningY);
     if (binningDesired == actualBinningX) return true;
     else return false;
 }
