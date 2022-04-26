@@ -68,14 +68,4 @@
     <param name="tf_prefix"         value="$(arg tf_prefix)" />
     
   </node>
-  <node name="stereo_undistort" pkg="image_undistort" type="stereo_undistort_node">
-    <param name="process_every_nth_frame" value="1"/>
-    <param name="frame_id" type="string" value="NAVICAM"/>
-    <param name="scale" value="0.3"/>
-    <remap from="raw/first/image"       to="/camera_array/cam0/image_raw"    />
-    <remap from="raw/second/image"       to="/camera_array/cam1/image_raw"   />
-    <remap from="raw/first/camera_info"      to="/camera_array/cam0/camera_info"     />
-    <remap from="raw/second/camera_info"      to="/camera_array/cam1/camera_info"     />
-    <param name="input_camera_info_from_ros_params" value="false"/>
-  </node>
 </launch>
